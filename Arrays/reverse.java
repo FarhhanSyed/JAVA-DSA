@@ -1,3 +1,4 @@
+//Time Complexity:O(n)
 public class reverse {
     public static void reverseA(int arr[]) {
         for (int i = 0; i < arr.length / 2; i++) {
