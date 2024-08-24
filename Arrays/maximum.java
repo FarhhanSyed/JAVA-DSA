@@ -2,15 +2,15 @@ import java.util.*;
 public class maximum {
     public static int getlargest(int a[])
     {
-        int max=Integer.MIN_VALUE;
+        int large=Integer.MIN_VALUE;
         for(int i=0;i<a.length;i++)
         {
-            if(a[i]>max)
+            if(a[i]>large)
             {
-                max=a[i];
+                large=a[i];
             }
         }
-        return max;
+        return large;
     }
     public static void main(String args[])
     {
