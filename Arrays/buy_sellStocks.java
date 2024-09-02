@@ -1,3 +1,4 @@
+//Time complexity:O(n)
 class buy_sellStocks {
     public static int buy_sell(int prices[]) {
         int maxProfit = 0;
