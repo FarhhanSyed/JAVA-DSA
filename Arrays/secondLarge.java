@@ -1,3 +1,4 @@
+//Time-Complexity:O(n)
 public class secondLarge {
     public static int second(int arr[]) {
         if (arr.length < 2) {
