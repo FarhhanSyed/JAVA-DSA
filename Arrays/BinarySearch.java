@@ -1,3 +1,4 @@
+//TIme COmolexity:O(log n)
 import java.util.*;
 
 public class BinarySearch {
