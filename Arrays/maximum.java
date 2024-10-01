@@ -1,6 +1,4 @@
-import java.util.*;
-public class maximum {
-    public static int getlargest(int a[])
+//Time Complexity:O(n)
     {
         int large=Integer.MIN_VALUE;
         for(int i=0;i<a.length;i++)
