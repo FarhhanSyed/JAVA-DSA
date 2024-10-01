@@ -1,3 +1,4 @@
+//TIme Complexity:O(n)
 public class kadanes {
     public static void subarrSum(int arr[]) {
         int sum = 0;
