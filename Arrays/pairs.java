@@ -1,3 +1,4 @@
+//TIme Complexity:O(n^2)
 public class pairs {
     public static void pairing(int arr[]) {
         for (int i = 0; i < arr.length - 1; i++) {
