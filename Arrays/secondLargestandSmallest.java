@@ -1,3 +1,4 @@
+//TIme Complexity:O(n)
 import java.util.*;
 
 public class secondLargestandSmallest {
