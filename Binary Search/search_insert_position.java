@@ -1,5 +1,5 @@
+//Time Complexity:O(log n)
 import java.util.*;
-
 public class search_insert_position {
     public static int searchInsert(int[] nums, int target) {
         int res = -1;
