@@ -1,3 +1,4 @@
+//Time Complexity:O(log n)
 import java.util.*;
 
 public class first_and_last_position {
