@@ -1,3 +1,4 @@
+//Time Compelexity:O(n)
 import java.util.*;
 public class LinearSearch {
     public static int linear(int A[],int k)
