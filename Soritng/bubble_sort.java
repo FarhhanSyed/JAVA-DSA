@@ -21,3 +21,25 @@ public class bubble_sort {
         bubble(arr);
     }
 }
+
+//for sorted array//
+// public class bubble_sort {
+//     public static void bubble(int arr[]) {
+//         int n = arr.length;
+//         boolean swap = false;
+//         for (int turn = 0; turn <= n - 2; turn++) {
+//             swap = false;
+//             for (int j = 0; j <= n - 2 - turn; j++) {
+//                 if (arr[j] > arr[j + 1]) {
+//                     int temp = arr[j];
+//                     arr[j] = arr[j + 1];
+//                     arr[j + 1] = temp;
+//                     swap = true;
+//                 }
+//             }
+//             if (!swap) {
+//                 break;
+//             }
+//         }
+//         System.out.println(Arrays.toString(arr));
+//     }
