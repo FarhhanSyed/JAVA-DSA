@@ -5,7 +5,7 @@ public class selection_sort {
     public static void selection(int arr[]) {
         for (int i = 0; i <= arr.length - 2; i++) {
             int small = i;
-            for (int j = i + 1; j <= arr.length - 1; j++) {
+            for (int j = i + 1; j <= arr.length - 1; j++) 
                 if (arr[j] < arr[small]) {
                     small = j;
                 }
