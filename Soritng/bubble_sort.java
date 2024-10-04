@@ -4,8 +4,8 @@ import java.util.*;
 public class bubble_sort {
     public static void bubble(int arr[]) {
         int n = arr.length;
-        for (int turn = 0; turn <= n - 2; turn++) {
-            for (int j = 0; j <= n - 2 - turn; j++) {
+        for (int turn = 0; turn < n - 1; turn++) {
+            for (int j = 0; j < n - 1 - turn; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
