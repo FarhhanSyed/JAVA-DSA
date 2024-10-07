@@ -1,5 +1,5 @@
+//Time-Complexity:O(n*m)
 import java.util.*;
-
 public class spiral_matrix {
     public static void spirl(int mat[][]) {
         int startRow = 0;
