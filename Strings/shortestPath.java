@@ -1,3 +1,4 @@
+//Time Complexity:O(n)
 //Given a route containing 4 directions(N,S,E,W),find shortest path to reach destination
 import java.util.*;
 public class shortestPath {
