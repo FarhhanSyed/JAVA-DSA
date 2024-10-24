@@ -1,3 +1,4 @@
+//Time Complexity-O(2^n)
 public class fibonacci {
     public static int fib(int n) {
         if (n == 0 || n == 1) {
