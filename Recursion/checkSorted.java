@@ -1,3 +1,4 @@
+//Time Complexity-O(n)
 public class checkSorted {
     public static boolean isSorted(int arr[], int i) {
         if (i == arr.length - 1) {
