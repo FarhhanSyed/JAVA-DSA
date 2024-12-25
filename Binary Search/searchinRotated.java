@@ -45,14 +45,25 @@ public class searchinRotated {
         return -1;
     }
 
+    public static int search(int arr[], int target) {
+        int pivot = pivot(arr);
+        if (pivot == -1) {
+            return binary(arr, 0, arr.length - 1, target);
+        }
+        if (arr[pivot] == target) {
+            return pivot;
+        }
+        if (target > arr[0]) {
+            return binary(arr, 0, pivot - 1, target);
+        } else {
+            return binary(arr, pivot + 1, arr.length - 1, target);
+        }
+    }
+
     public static void main(String args[]) {
         int arr[] = { 3, 4, 5, 6, 7, 0, 1, 2 };
-        int target = 2;
+        int target = 4;
         int pivot = pivot(arr);
-        int first = binary(arr, 0, pivot, target);
-        if (first != -1) {
-            System.out.println(binary(arr, 0, pivot, target));
-        }
-        System.out.println(binary(arr, pivot + 1, arr.length - 1, target));
+        System.out.println(search(arr, target));
     }
 }
