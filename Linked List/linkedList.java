@@ -52,7 +52,7 @@ public class linkedList {
         temp.next = newNode;
     }
 
-    public int removeFirst() {
+    public int removeFirst() { // O(1)
         if (size == 0) {
             System.out.println("LL is empty");
             return Integer.MIN_VALUE;
@@ -68,7 +68,7 @@ public class linkedList {
         return val;
     }
 
-    public int removeLast() {
+    public int removeLast() { // O(1)
         if (size == 0) {
             System.out.println("LL is empty");
             return Integer.MIN_VALUE;
