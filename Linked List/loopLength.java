@@ -1,3 +1,5 @@
+//TIme Complexity-O(n)
+//Space Complexity-O(1)
 class Node {
     int data;
     Node next;
