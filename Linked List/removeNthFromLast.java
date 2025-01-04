@@ -1,3 +1,5 @@
+//TIme complexity-O(n)
+//Space Complexity-O(1)
 public class removeNthFromLast {
     public static class Node {
         int data;
