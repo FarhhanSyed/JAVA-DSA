@@ -16,7 +16,7 @@ class Node {
     public static Node tail;
 }
 
-public class oddEvenList {
+public class deleteMiddleNode {
     public static Node oddEven(Node head) {
         Node slow = head;
         Node fast = head;
