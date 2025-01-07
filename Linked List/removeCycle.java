@@ -23,17 +23,14 @@ public class removeCycle {
                 break;
             }
         }
-        Node dum = head;
-        while (slow != dum) {
-            dum = dum.next;
+        slow = head;
+        Node prev = null;
+        while (slow != fast) {
+            prev = fast;
             slow = slow.next;
+            fast = fast.next;
         }
-
-        Node rem = dum;
-        while (rem.next != dum) {
-            rem = rem.next;
-        }
-        rem.next = null;
+        prev.next = null;
     }
 
     public static void print(Node head) {
