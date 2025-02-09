@@ -1,46 +1,48 @@
-import java.util.ArrayList;
-
 public class array {
     public static class Stack {
-        static ArrayList<Integer> list = new ArrayList<>();
+        int top = -1;
+        int st[] = new int[10];
 
-        // isEmpty
-        public boolean isEmpty() {
-            return list.size() == 0;
-        }
-
-        // push
         public void push(int data) {
-            list.add(data);
+            if (top >= 10) {
+                return;
+            }
+            st[++top] = data;
         }
 
-        // pop
         public int pop() {
-            if (isEmpty()) {
+            if (top == -1) {
+                System.out.println("Stack is Empty");
                 return -1;
             }
-            int val = list.get(list.size() - 1);
-            list.remove(list.size() - 1);
-            return val;
+            return st[top--];
         }
 
-        // peek
         public int peek() {
-            if (isEmpty()) {
+            if (top == -1) {
+                System.out.println("Stack is Empty");
                 return -1;
             }
-            return list.get(list.size() - 1);
+            return st[top];
+        }
+
+        public int size() {
+            return top + 1;
+        }
+
+        public boolean isEmpty() {
+            return top == -1;
         }
     }
 
     public static void main(String[] args) {
         Stack s = new Stack();
-        s.push(1);
         s.push(2);
         s.push(3);
-        while (!s.isEmpty()) {
-            System.out.println(s.peek());
-            s.pop();
-        }
+        s.push(4);
+        s.push(5);
+        System.out.println(s.pop());
+        System.out.println(s.peek());
+        System.out.println(s.size());
     }
 }
