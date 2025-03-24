@@ -39,9 +39,10 @@ public class linkedList {
                 return -1;
             }
             int val = head.data;
-            head = head.next;
             if (head == tail) {
                 head = tail = null;
+            } else {
+                head = head.next;
             }
             return val;
         }
