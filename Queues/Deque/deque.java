@@ -13,5 +13,6 @@ public class deque{
         System.out.println(dq.removeFirst());
         System.out.println(dq.removeLast());
         System.out.println(dq);
+        dq.addFirst(76);
     }
 }
