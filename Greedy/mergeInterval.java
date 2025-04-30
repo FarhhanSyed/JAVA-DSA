@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class mergeInterval {
-    public static void merge(int[][] intervals) {
+    public static int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
         ArrayList<int[]> res = new ArrayList<>();
         int i = 0;
@@ -19,10 +19,14 @@ public class mergeInterval {
             }
             i++;
         }
+        return res.toArray(new int[res.size()][]);
     }
 
     public static void main(String[] args) {
         int[][] intervals = { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
-
+        int[][] res = merge(intervals);
+        for (int i = 0; i < res.length; i++) {
+            System.out.print("[" + res[i][0] + "," + res[i][1] + "]");
+        }
     }
 }
