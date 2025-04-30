@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class insertInterval {
-    public static void insert(int[][] intervals, int[] newInterval) {
+    public static int[][] insert(int[][] intervals, int[] newInterval) {
         ArrayList<int[]> res = new ArrayList<>();
         int i = 0;
         int n = intervals.length;
@@ -19,17 +19,15 @@ public class insertInterval {
             res.add(intervals[i]);
             i++;
         }
-        int[][] g = res.toArray(new int[res.size()][]);
-        for (int j = 0; j < n; j++) {
-            System.out.print(g[0]);
-            System.out.print(g[1]);
-            System.out.println();
-        }
+        return res.toArray(new int[res.size()][]);
     }
 
     public static void main(String args[]) {
         int[][] intervals = { { 1, 3 }, { 6, 9 } };
         int[] newInterval = { 2, 5 };
-        insert(intervals, newInterval);
+        int[][] res = insert(intervals, newInterval);
+        for (int i = 0; i < res.length; i++) {
+            System.out.print("[" + res[i][0] + "," + res[i][1] + "]");
+        }
     }
 }
