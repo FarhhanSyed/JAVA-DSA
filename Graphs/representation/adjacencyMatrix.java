@@ -1,3 +1,4 @@
+//Space : O(v^2)
 import java.util.*;
 
 public class adjacencyMatrix {
