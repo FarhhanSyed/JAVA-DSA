@@ -4,7 +4,7 @@
 //Space : O(V)
 import java.util.*;
 
-public class Kahns {
+public class kahns {
     public static void kahnSort(ArrayList<ArrayList<Integer>> graph) {
         Queue<Integer> q = new LinkedList<>();
         int indegree[] = new int[graph.size()];
