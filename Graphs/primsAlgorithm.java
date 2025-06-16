@@ -1,11 +1,11 @@
 import java.util.*;
 
 class Pair1 {
-    int wt;
+    int weight;
     int node;
 
     Pair1(int w, int n) {
-        this.wt = w;
+        this.weight = w;
         this.node = n;
     }
 }
@@ -13,24 +13,24 @@ class Pair1 {
 public class primsAlgorithm {
     public static int minSpanTree(ArrayList<ArrayList<Pair1>> graph, int n) {
         boolean[] visit = new boolean[n];
-        PriorityQueue<Pair1> pq = new PriorityQueue<>((x, y) -> x.wt - y.wt);
+        PriorityQueue<Pair1> pq = new PriorityQueue<>((x, y) -> x.weight - y.weight);
         pq.add(new Pair1(0, 0));
-        int sum = 0;
+        int totalWeight = 0;
         while (!pq.isEmpty()) {
-            int weigh = pq.peek().wt;
-            int node = pq.peek().node;
+            int weigh = pq.peek().weight;
+            int u = pq.peek().node;
             pq.remove();
-            if (visit[node])
+            if (visit[u])
                 continue;
-            visit[node] = true;
-            sum += weigh;
-            for (Pair1 p : graph.get(node)) {
+            visit[u] = true;
+            totalWeight += weigh;
+            for (Pair1 p : graph.get(u)) {
                 if (!visit[p.node]) {
-                    pq.add(new Pair1(p.wt, p.node));
+                    pq.add(new Pair1(p.weight, p.node));
                 }
             }
         }
-        return sum;
+        return totalWeight;
     }
 
     public static void main(String[] args) {
