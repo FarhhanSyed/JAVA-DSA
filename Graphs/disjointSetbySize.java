@@ -1,16 +1,14 @@
-
-//Time Complexity:O(1)
 import java.util.*;
 
-class DisJointSet {
-    int[] parent, rank;
+class DisJointSetSize {
+    int[] size, parent;
 
-    DisJointSet(int n) {
+    DisJointSetSize(int n) {
+        size = new int[n + 1];
         parent = new int[n + 1];
-        rank = new int[n + 1];
         for (int i = 0; i <= n; i++) {
+            size[i] = 1;
             parent[i] = i;
-            rank[i] = 0;
         }
     }
 
@@ -24,23 +22,21 @@ class DisJointSet {
     public void union(int u, int v) {
         int pu = findP(u);
         int pv = findP(v);
-        if (pu == pv) {
+        if (pu == pv)
             return;
-        }
-        if (rank[pu] < rank[pv]) {
+        if (size[pu] < size[pv]) {
             parent[pu] = pv;
-        } else if (rank[pu] > rank[pv]) {
-            parent[pv] = pu;
+            size[pv] += size[pu];
         } else {
             parent[pv] = pu;
-            rank[pu]++;
+            size[pu] += size[pv];
         }
     }
 }
 
-public class disjointSetbyUnion {
+public class disjointSetbySize {
     public static void main(String[] args) {
-        DisJointSet ds = new DisJointSet(7);
+        DisJointSetSize ds = new DisJointSetSize(7);
         ds.union(1, 2);
         ds.union(2, 3);
         ds.union(4, 5);
