@@ -17,6 +17,13 @@ public class maxAreaHistogram {
             }
             st.push(i);
         }
+        while(!st.isEmpty())
+        {
+            int val=heights[st.pop()];
+            int nsr=n;
+            int nsl=st.isEmpty() ? -1 : st.peek();
+            area=Math.max(area,val*(nsr-nsl-1));
+        }
         return area;
     }
 
