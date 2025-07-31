@@ -1,0 +1,31 @@
+1. Swap 2 number: 
+    a=a^b
+    b=a^b
+    a=a^b
+
+2. Check if ith bit is set or not:
+    if((n & (1<<i)) ! = 0 )
+        true
+    else
+        false
+
+3. Set ith bit:
+    n | (1<<i)
+
+4. Clear ith bit:
+    n & ~(1<<i)
+
+5. Toggle ith bit:
+    n ^ (1<<i)
+
+6. Check if n is odd or even:
+    if((n&1)==1)
+        even
+    else
+        add
+
+7. Check if n is power of 2:
+    if((n&(n-1))==0)
+        true
+    else
+        false
