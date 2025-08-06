@@ -7,9 +7,17 @@ public class reverseStack {
         }
         int val = st.pop();
         reverse(st);
-        st.push(val);
+        insertAtBottom(st,val);
     }
-
+    public static void insertAtBottom(Stack<Integer> st, int val) {
+        if (st.isEmpty()) {
+            st.push(val);
+            return;
+        }
+        int top = st.pop();
+        insertAtBottom(st, val);
+        st.push(top);
+    }
     public static void print(Stack<Integer> st) {
         while (!st.isEmpty()) {
             System.out.println(st.pop());
