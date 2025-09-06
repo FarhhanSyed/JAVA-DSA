@@ -14,9 +14,9 @@ public class right_rotate {
 
     public static void right(int arr[], int k) {
         int n = arr.length;
-        reverse(arr, 0, n - k - 1);
-        reverse(arr, n - k, n - 1);
         reverse(arr, 0, n - 1);
+        reverse(arr, 0, k - 1);
+        reverse(arr, k, n - 1);
         System.out.println(Arrays.toString(arr));
     }
 
